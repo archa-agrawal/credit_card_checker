@@ -16,11 +16,12 @@ const validateCred = (arr) => {
 }
 
 const findInvalidCards = (arr) => {
-    for (let i=0; i< arr.length; i++) {
-        let invalidCards = []
-        if (validateCred(arr[i]) = false) {
+    let invalidCards = []
+    for (let i=0; i< arr.length; i++) {     
+        let querryCards = validateCred(arr[i])
+        if (querryCards === false) {
             invalidCards.push(arr[i])
         }
     }
     return invalidCards
-}        
+} 
