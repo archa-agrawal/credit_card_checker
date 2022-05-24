@@ -14,6 +14,13 @@ const validateCred = (arr) => {
     }
     return (numSum + doubleNumSum) % 10 === 0 
 }
-let ccNumber = [4, 5, 3, 2, 7, 7, 8, 7, 7, 1, 0, 9, 1, 7, 9, 5]
-console.log(validateCred(ccNumber))
-          
+
+const findInvalidCards = (arr) => {
+    for (let i=0; i< arr.length; i++) {
+        let invalidCards = []
+        if (validateCred(arr[i]) = false) {
+            invalidCards.push(arr[i])
+        }
+    }
+    return invalidCards
+}        
